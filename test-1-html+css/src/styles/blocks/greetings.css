@@ -1,0 +1,45 @@
+.greetings {
+  max-width: 528px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.greetings__title {
+  text-align: center;
+  font-size: 28px;
+  line-height: 32px;
+  letter-spacing: -0.588px;
+}
+
+.greetings__subtitle {
+  color: var(--color-gray-dark);
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.176px;
+}
+
+@media screen and (min-width: 768px) {
+  .greetings {
+    gap: 24px;
+    margin-bottom: 56px;
+  }
+
+  .greetings__title {
+    font-size: 48px;
+    line-height: 48px;
+    letter-spacing: -1.44px;
+  }
+
+  .greetings__subtitle {
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.198px;
+  }
+}

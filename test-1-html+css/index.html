@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/styles/index.css" />
+    <title>Test 1 - HTML+CSS</title>
+  </head>
+  <body class="body">
+    <div class="root">
+      <main class="main">
+        <div class="greetings">
+          <h1 class="greetings__title">Hello World</h1>
+          <h2 class="greetings__subtitle">Always ready to meet with you.</h2>
+        </div>
+        <section class="section world-map">
+          <picture>
+            <source
+              media="(min-width: 1024px)"
+              srcset="./src/assets/images/world-map-desktop.png"
+            />
+            <source
+              media="(min-width: 600px)"
+              srcset="./src/assets/images/world-map-tablet.png"
+            />
+            <source
+              media="(min-width: 0px)"
+              srcset="./src/assets/images/world-map-mobile.png"
+            />
+            <img
+              class="world-map__img"
+              src="./src/assets/images/world-map-desktop.png"
+              alt="World map"
+            />
+          </picture>
+        </section>
+        <section class="section cards">
+          <article class="card cards__card">
+            <div class="card__header">
+              <h3 class="card__title">Damietta</h3>
+              <svg class="card__icon" viewBox="0 0 32 32">
+                <use xlink:href="./src/assets/images/sprite.svg#egypt"></use>
+              </svg>
+            </div>
+            <div class="card__content">
+              <a href="tel:+200219033" class="card__link" title="number"
+                >+20 0219033</a
+              >
+              <a
+                href="mailto:alexbank@damietta.com"
+                class="card__link"
+                title="email"
+                >alexbank@damietta.com</a
+              >
+            </div>
+            <div class="card__footer">
+              <span class="card__coordinats"
+                >3 Al Togari, Qism Damietta, Damietta, Damietta Governorate
+                34511, Egypt</span
+              >
+            </div>
+          </article>
+          <article class="card cards__card">
+            <div class="card__header">
+              <h3 class="card__title">Lille</h3>
+              <svg class="card__icon" viewBox="0 0 32 32">
+                <use xlink:href="./src/assets/images/sprite.svg#france"></use>
+              </svg>
+            </div>
+            <div class="card__content">
+              <a href="tel:+33320544450" class="card__link" title="number"
+                >+33 3 20 54 44 50</a
+              >
+              <a
+                href="mailto:theatre-sebastobol@lille.fr"
+                class="card__link"
+                title="email"
+                >theatre-sebastobol@lille.fr</a
+              >
+            </div>
+            <div class="card__footer">
+              <span class="card__coordinats"
+                >Pl. Sébastopol, 59000 Lille, France</span
+              >
+            </div>
+          </article>
+          <article class="card cards__card">
+            <div class="card__header">
+              <h3 class="card__title">Dayton</h3>
+              <svg class="card__icon" viewBox="0 0 32 32">
+                <use xlink:href="./src/assets/images/sprite.svg#usa"></use>
+              </svg>
+            </div>
+            <div class="card__content">
+              <a href="tel:+19372261710" class="card__link" title="number"
+                >+1 937 226 1710</a
+              >
+              <a
+                href="mailto:info@americaspackardmuseum.org"
+                class="card__link"
+                title="email"
+                >info@americaspackardmuseum.org</a
+              >
+            </div>
+            <div class="card__footer">
+              <span class="card__coordinats"
+                >420 S Ludlow St, Dayton, OH 45402, United States</span
+              >
+            </div>
+          </article>
+          <article class="card cards__card">
+            <div class="card__header">
+              <h3 class="card__title">Kulusuk</h3>
+              <svg class="card__icon" viewBox="0 0 32 32">
+                <use
+                  xlink:href="./src/assets/images/sprite.svg#greenland"
+                ></use>
+              </svg>
+            </div>
+            <div class="card__content">
+              <a href="tel:+299986988" class="card__link" title="number"
+                >+299 98 69 88</a
+              >
+              <a href="mailto:info@mit.gl" class="card__link" title="email"
+                >info@mit.gl</a
+              >
+            </div>
+            <div class="card__footer">
+              <span class="card__coordinats">HVF8+R82, Kulusuk, Greenland</span>
+            </div>
+          </article>
+          <article class="card cards__card">
+            <div class="card__header">
+              <h3 class="card__title">Kanazawa</h3>
+              <svg class="card__icon" viewBox="0 0 32 32">
+                <use xlink:href="./src/assets/images/sprite.svg#japan"></use>
+              </svg>
+            </div>
+            <div class="card__content">
+              <a href="tel:+81762202469" class="card__link" title="number"
+                >+81 76 220 2469</a
+              >
+              <a href="mailto:kanazawa@lg.jp" class="card__link" title="email"
+                >kanazawa@lg.jp</a
+              >
+            </div>
+            <div class="card__footer">
+              <span class="card__coordinats"
+                >1 Chome Higashiyama, Kanazawa, Ishikawa 920-0831, Japan</span
+              >
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

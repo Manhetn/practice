@@ -1,0 +1,34 @@
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 40px;
+}
+
+@media screen and (min-width: 767px) {
+  .cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: -214px;
+  }
+
+  .cards__card {
+    width: calc(50% - 8px);
+  }
+}
+
+@media screen and (min-width: 1023px) {
+  .cards {
+    gap: 24px;
+  }
+
+  .cards__card {
+    width: calc(32.8% - 12px);
+  }
+
+  .cards__card:first-child,
+  .cards__card:nth-child(2) {
+    width: calc(50% - 12px);
+  }
+}

@@ -1,0 +1,17 @@
+.root {
+  height: 100vh;
+  width: 100vw;
+  background-color: aqua;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: auto;
+  padding: 48px 40px;
+  background-color: var(--color-gray-light);
+}
+
+@media screen and (min-width: 768px) {
+  .root {
+    padding: 116px 32px;
+  }
+}

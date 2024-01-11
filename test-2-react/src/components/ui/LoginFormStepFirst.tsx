@@ -90,9 +90,9 @@ const LoginFormStepFirst: React.FC = () => {
         <button
           type="button"
           className="pointer-events-auto rounded-md bg-indigo-600 px-3 py-2 text-[0.8125rem] font-semibold leading-5 text-white hover:bg-indigo-500 disabled:opacity-25"
-          onMouseDown={handleHoldStart}
-          onMouseUp={handleHoldInterrupt}
-          onMouseLeave={handleHoldInterrupt}
+          onPointerDown={handleHoldStart}
+          onPointerUp={handleHoldInterrupt}
+          onPointerCancel={handleHoldInterrupt}
           disabled={
             !validationResult.email.isValid ||
             !ValidationService.checkNotEmptyField(email) ||

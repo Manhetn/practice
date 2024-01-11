@@ -18,6 +18,7 @@ const LoginFormStepSecond: React.FC = () => {
   const [email, setEmail] = useState(userData.email);
   const [modalContent, setModalContent] = useState('');
   const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [isButtonDisabled, setIsButtonDisabled] = useState(false);
   const [validationResult, setValidationResult] =
     useState<IFieldGroupValidationResult>({
       email: {
@@ -31,6 +32,7 @@ const LoginFormStepSecond: React.FC = () => {
 
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
+    setIsButtonDisabled(true);
     try {
       const response = await fetch('http://localhost:3000/api/endpoint', {
         method: 'POST',
@@ -45,8 +47,10 @@ const LoginFormStepSecond: React.FC = () => {
       } else {
         setModalContent('Error!');
       }
+      setIsButtonDisabled(false);
     } catch (error) {
       setModalContent('Error!');
+      setIsButtonDisabled(false);
     }
     setModalIsOpen(true);
   };
@@ -55,7 +59,7 @@ const LoginFormStepSecond: React.FC = () => {
     history.goBack();
   };
 
-  const closeModal = () => {
+  const handleCloseModal = () => {
     setModalIsOpen(false);
   };
 
@@ -103,7 +107,7 @@ const LoginFormStepSecond: React.FC = () => {
         <button
           className="pointer-events-auto rounded-md bg-indigo-600 px-3 py-2 text-[0.8125rem] font-semibold leading-5 text-white hover:bg-indigo-500 disabled:opacity-25"
           type="submit"
-          disabled={!validationResult.email.isValid}
+          disabled={!validationResult.email.isValid || isButtonDisabled}
           onClick={handleSubmit}
         >
           Confirm
@@ -111,12 +115,13 @@ const LoginFormStepSecond: React.FC = () => {
       </div>
       <Modal
         isOpen={modalIsOpen}
-        onRequestClose={closeModal}
+        onRequestClose={handleCloseModal}
+        portalClassName="fixed"
         className=" absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 artboard artboard-demo w-64 h-64"
       >
         <h2 className="text-2xl font-bold mb-4 pb-8">{modalContent}</h2>
         <button
-          onClick={closeModal}
+          onClick={handleCloseModal}
           className="pointer-events-auto rounded-md bg-indigo-600 px-3 py-2 text-[0.8125rem] font-semibold leading-5 text-white hover:bg-indigo-500 disabled:opacity-25"
         >
           Close

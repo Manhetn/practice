@@ -17,7 +17,7 @@ const LoginPage: React.FC = () => {
 
   return (
     <BasicLayout>
-      <form className="flex flex-col justify-between h-full pb-8">
+      <form className="flex flex-col justify-between h-full">
         {step === 'step-1' ? <LoginFormStepFirst /> : <LoginFormStepSecond />}
       </form>
     </BasicLayout>

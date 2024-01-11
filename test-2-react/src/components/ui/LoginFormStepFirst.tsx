@@ -89,7 +89,7 @@ const LoginFormStepFirst: React.FC = () => {
         />
         <button
           type="button"
-          className="pointer-events-auto rounded-md bg-indigo-600 px-3 py-2 text-[0.8125rem] font-semibold leading-5 text-white hover:bg-indigo-500 disabled:opacity-25"
+          className="rounded-md px-3 py-4 font-semibold leading-5  bg-primary text-center p-4 text-black disabled:opacity-25 w-full"
           onPointerDown={handleHoldStart}
           onPointerUp={handleHoldInterrupt}
           onPointerCancel={handleHoldInterrupt}
